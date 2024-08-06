@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Header from "@/components/Header";
+import Header from "@/components/Intro";
 import Languages from "@/components/Languages";
 import Framework from "@/components/Framework";
 import Experience from "@/components/Experience";
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
     <Navbar />
-    <main>
+    <main className="px-8 py-7 space-y-16">
       <Header />
       <Languages />
       <Framework />

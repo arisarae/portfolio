@@ -4,16 +4,16 @@ import Icon from "../Icon";
 
 export default function Framework() {
   return (
-    <>
+    <div className="w-full h-fitflex flex-row py-6 space-y-4">
       <div>
-        <h2>Frameworks & Libraries</h2>
-        <p>Show All</p>
+        <h2 className="w-full text-2xl text-left font-lexend-600 text-navy">Frameworks & Libraries</h2>
+        {/* <p>Show All</p> */}
       </div>
-      <div>
+      <div className="w-full h-fit flex flex-wrap">
         {frameworkLibrary.map((item: techType) => (
           <Icon key={item.id} item={item} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
