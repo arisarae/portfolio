@@ -28,6 +28,9 @@ const config: Config = {
         "lexend-800": ["Lexend-800", "sans-serif"],
         "lexend-900": ["Lexend-900", "sans-serif"],
       },
+      screens: {
+        "2sm": "425px"
+      }
     },
   },
   plugins: [],

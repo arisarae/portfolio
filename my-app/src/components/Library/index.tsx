@@ -1,19 +1,37 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 interface LibDetailProps {
-  image: string,
-  title: string,
-  detail: string,
+  image: string;
+  title: string;
+  detail: string[];
+  link: string;
 }
 
-export default function Library({ image, title, detail }: LibDetailProps) {
+export default function Library({
+  image,
+  title,
+  detail,
+  link,
+}: LibDetailProps) {
+  const router = useRouter();
+
   return (
-    <>
-      <Image src={image} alt={title} width={250} height={250} />
+    <div className="w-80 h-fit flex flex-col">
+      <Image
+        src={image}
+        alt={title}
+        width={500}
+        height={375}
+        style={{
+          width: "370px",
+          height: "auto",
+        }}
+      />
       <div>
-        <p>{title}</p>
-        <p>{detail}</p>
+        <p onClick={() => router.push(link)}>{title}</p>
+        <p>{detail.join(", ")}</p>
       </div>
-    </>
+    </div>
   );
 }

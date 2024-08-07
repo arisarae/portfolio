@@ -7,15 +7,15 @@ interface IconDetailProps {
 
 export default function Icon({ item }: IconDetailProps) {
   return (
-    <div className="w-1/2 h-fit px-3.5 py-4 flex flex-col space-y-5">
+    <div className="w-1/2 2sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 xl:max-w-72 h-fit px-3.5 py-4 flex flex-col space-y-5">
       <Image
         src={item.image}
         alt={item.title}
         width={250}
         height={250}
         style={{
-          width: "125px",
-          height: "125px",
+          width: "100%",
+          height: "auto",
           alignSelf: "left",
         }}
       />
