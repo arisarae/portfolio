@@ -7,7 +7,7 @@ export default function Experience() {
         <h2>Experiences</h2>
       </div>
       <div>
-        <Library
+        {/* <Library
           image="/github.svg"
           title="Projects"
           detail="Website & GitHub"
@@ -21,7 +21,7 @@ export default function Experience() {
           image="/github.svg"
           title="Work"
           detail="Freelance & Internship"
-        />
+        /> */}
       </div>
     </>
   );

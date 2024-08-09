@@ -6,8 +6,8 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="w-full h-fit flex flex-row space-x-2.5 justify-end p-2.5 bg-light-blue sticky top-0">
-      <div className="w-fit h-fit flex flex-row space-x-4 bg-navy py-3 px-6 rounded-full">
+    <nav className="w-full h-fit flex flex-row space-x-2.5 justify-end p-2.5 sm:px-12 md:px-16 bg-light-blue sticky top-0 z-10">
+      {/* <div className="w-fit h-fit flex flex-row space-x-4 bg-navy py-3 px-6 rounded-full">
         <Image
           src="/download.svg"
           alt="download"
@@ -19,7 +19,7 @@ export default function Navbar() {
           }}
         />
         <p className="text-sm font-lexend-600 text-baby-blue">Download CV</p>
-      </div>
+      </div> */}
       <Image
         src={contacts[3].image}
         alt={contacts[3].title}

@@ -17,20 +17,34 @@ export default function Library({
   const router = useRouter();
 
   return (
-    <div className="w-80 h-fit flex flex-col">
+    <div className="w-5/6 md:w-1/4 h-fit space-y-4 flex flex-col">
       <Image
         src={image}
         alt={title}
         width={500}
         height={375}
         style={{
-          width: "370px",
+          width: "auto",
           height: "auto",
         }}
       />
       <div>
-        <p onClick={() => router.push(link)}>{title}</p>
-        <p>{detail.join(", ")}</p>
+        <div className="w-full h-fit flex flex-row items-center justify-between">
+          <p className="w-fit text-left text-lg font-lexend-500 text-navy">
+            {title}
+          </p>
+          <Image
+            onClick={() => router.push(link)}
+            src="/open.svg"
+            alt="open"
+            width={60}
+            height={60}
+            className="w-4 h-4"
+          />
+        </div>
+        <p className="w-full text-left text-base font-lexend-400 text-dark-blue">
+          {detail.join(", ")}
+        </p>
       </div>
     </div>
   );
